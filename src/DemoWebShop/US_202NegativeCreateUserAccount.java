@@ -51,15 +51,20 @@ public class US_202NegativeCreateUserAccount {
         WebElement registerButtonAfterConfirm = driver.findElement(By.xpath("//input[@id='register-button']"));
         registerButtonAfterConfirm.click();
 
-    }
 
-
-    @Test
-    public void errorMessage(){
         //Error Message with existing email account//
         WebElement errorMessage = driver.findElement(By.xpath("//div[@class='message-error']"));
         Assert.assertTrue(errorMessage.isDisplayed());
+
     }
+
+
+    //@Test
+    //public void errorMessage(){
+        //Error Message with existing email account//
+        //WebElement errorMessage = driver.findElement(By.xpath("//div[@class='message-error']"));
+        //Assert.assertTrue(errorMessage.isDisplayed());
+    //}
 
 
     @After

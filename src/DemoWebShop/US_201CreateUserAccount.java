@@ -50,10 +50,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
             //Click "Register"-Button to confirm
             WebElement registerButtonAfterConfirm = driver.findElement(By.xpath("//input[@id='register-button']"));
             registerButtonAfterConfirm.click();
+
+
+            //Registration Completed
+            WebElement registrationCompleted = driver.findElement(By.xpath("//div[@class='result']"));
+            String expectedResult = "Your registration completed";
+            String actualResult = registrationCompleted.getText();
+            Assert.assertEquals(expectedResult, actualResult);
+
+            //Continue
+            WebElement continueButton = driver.findElement(By.xpath("//input[@type='button']"));
+            continueButton.click();
+
         }
 
 
-        @Test
+       /* @Test
         public void registrationCompleted(){
             //Registration Completed
             WebElement registrationCompleted = driver.findElement(By.xpath("//div[@class='result']"));
@@ -64,7 +76,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
             //Continue
             WebElement continueButton = driver.findElement(By.xpath("//input[@type='button']"));
             continueButton.click();
-        }
+        }     */
+
 
 
         @After
