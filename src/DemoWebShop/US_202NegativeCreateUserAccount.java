@@ -55,16 +55,10 @@ public class US_202NegativeCreateUserAccount {
 
 
     @Test
-    public void registrationCompleted(){
-        //Registration Completed
-        WebElement registrationCompleted = driver.findElement(By.xpath("//div[@class='result']"));
-        String expectedResult = "Your registration completed";
-        String actualResult = registrationCompleted.getText();
-        Assert.assertEquals(expectedResult, actualResult);
-
-        //Continue
-        WebElement continueButton = driver.findElement(By.xpath("//input[@type='button']"));
-        continueButton.click();
+    public void errorMessage(){
+        //Error Message with existing email account//
+        WebElement errorMessage = driver.findElement(By.xpath("//div[@class='message-error']"));
+        Assert.assertTrue(errorMessage.isDisplayed());
     }
 
 
