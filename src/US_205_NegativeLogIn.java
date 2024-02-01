@@ -32,10 +32,10 @@ public class US_205_NegativeLogIn {
     @Test
     public void emptyLogin() {
         WebElement singEmail = driver.findElement(By.xpath("//input[@class='email']"));
-        singEmail.sendKeys(" ");
+        singEmail.sendKeys("");
         myWait(2);
         WebElement singPassword = driver.findElement(By.xpath("//input[@class='password']"));
-        singPassword.sendKeys(" ");
+        singPassword.sendKeys("");
         myWait(2);
         WebElement finishLogIn = driver.findElement(By.xpath("(//input[@type='submit'])[2]"));
         finishLogIn.click();
@@ -46,10 +46,10 @@ public class US_205_NegativeLogIn {
     @Test
     public  void validEmailEmptyPassword(){
         WebElement singEmail = driver.findElement(By.xpath("//input[@class='email']"));
-        singEmail.sendKeys("tanita.khokhlova@gmail.com ");
+        singEmail.sendKeys("tanita.khokhlova@gmail.com");
         myWait(2);
         WebElement singPassword = driver.findElement(By.xpath("//input[@class='password']"));
-        singPassword.sendKeys(" ");
+        singPassword.sendKeys("");
         myWait(2);
         WebElement finishLogIn = driver.findElement(By.xpath("(//input[@type='submit'])[2]"));
         finishLogIn.click();
@@ -61,10 +61,10 @@ public class US_205_NegativeLogIn {
     @Test
     public  void emptyEmailValidPassword() {
         WebElement singEmail = driver.findElement(By.xpath("//input[@class='email']"));
-        singEmail.sendKeys(" ");
+        singEmail.sendKeys("");
         myWait(2);
         WebElement singPassword = driver.findElement(By.xpath("//input[@class='password']"));
-        singPassword.sendKeys("QwertyQ123456 ");
+        singPassword.sendKeys("QwertyQ123456");
         myWait(2);
         WebElement finishLogIn = driver.findElement(By.xpath("(//input[@type='submit'])[2]"));
         finishLogIn.click();
