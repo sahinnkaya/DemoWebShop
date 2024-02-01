@@ -34,19 +34,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
             genderButton.click();
             //Firstname
             WebElement firstName = driver.findElement(By.xpath("//input[@name='FirstName']"));
-            firstName.sendKeys("Aliye");
+            firstName.sendKeys("Sahin");
             //LastName
             WebElement lastName = driver.findElement(By.xpath("//input[@name='LastName']"));
-            lastName.sendKeys("Candir");
+            lastName.sendKeys("Kaya");
             //E-mail
             WebElement eMail = driver.findElement(By.xpath("//input[@name='Email']"));
-            eMail.sendKeys("candiraliyee@gmail.com");
+            eMail.sendKeys("sahinkaya94@gmail.com");
             //Password
             WebElement passWord = driver.findElement(By.xpath("//input[@name='Password']"));
-            passWord.sendKeys("Aliye123");
+            passWord.sendKeys("Sahin123");
             //Confirm password
             WebElement confirmPassword = driver.findElement(By.xpath("//input[@name='ConfirmPassword']"));
-            confirmPassword.sendKeys("Aliye123");
+            confirmPassword.sendKeys("Sahin123");
             //Click "Register"-Button to confirm
             WebElement registerButtonAfterConfirm = driver.findElement(By.xpath("//input[@id='register-button']"));
             registerButtonAfterConfirm.click();
