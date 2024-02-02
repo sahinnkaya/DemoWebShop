@@ -14,20 +14,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
     public class US_201CreateUserAccount {
         WebDriver driver = new ChromeDriver();
-
         @Before
-        public void setUp() {
+        public void setUp(){
             //Navigate to website.
             driver.navigate().to("https://demowebshop.tricentis.com/");
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             driver.manage().window().maximize();
         }
 
+
         @Test
         public void createUserAccount() {
             // I should be able to click “Register” button on the homepage.
             WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']"));
             registerButton.click();
+
             //Registration step. Choose gender
             WebElement genderButton = driver.findElement(By.xpath("//label[@for='gender-female']"));
             genderButton.click();
@@ -50,15 +51,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
             WebElement registerButtonAfterConfirm = driver.findElement(By.xpath("//input[@id='register-button']"));
             registerButtonAfterConfirm.click();
 
+
             //Registration Completed
             WebElement registrationCompleted = driver.findElement(By.xpath("//div[@class='result']"));
             String expectedResult = "Your registration completed";
             String actualResult = registrationCompleted.getText();
             Assert.assertEquals(expectedResult, actualResult);
+
             //Continue
             WebElement continueButton = driver.findElement(By.xpath("//input[@type='button']"));
             continueButton.click();
+
         }
+
+
        /* @Test
         public void registrationCompleted(){
             //Registration Completed
@@ -72,8 +78,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
             continueButton.click();
         }     */
 
+
+
         @After
         public void tearDown() {
             driver.quit();
         }
-    }
+}

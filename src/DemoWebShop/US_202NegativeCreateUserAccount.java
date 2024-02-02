@@ -19,7 +19,9 @@ public class US_202NegativeCreateUserAccount {
         driver.navigate().to("https://demowebshop.tricentis.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
+
     }
+
 
     @Test
     public void createUserAccount() {
@@ -48,18 +50,26 @@ public class US_202NegativeCreateUserAccount {
         //Click "Register"-Button to confirm
         WebElement registerButtonAfterConfirm = driver.findElement(By.xpath("//input[@id='register-button']"));
         registerButtonAfterConfirm.click();
+
+
         //Error Message with existing email account//
         WebElement errorMessage = driver.findElement(By.xpath("//div[@class='message-error']"));
         Assert.assertTrue(errorMessage.isDisplayed());
+
     }
+
+
     //@Test
     //public void errorMessage(){
         //Error Message with existing email account//
         //WebElement errorMessage = driver.findElement(By.xpath("//div[@class='message-error']"));
         //Assert.assertTrue(errorMessage.isDisplayed());
     //}
+
+
     @After
     public void tearDown() {
         driver.quit();
     }
+
 }
